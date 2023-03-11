@@ -1,21 +1,34 @@
+import React, { useState } from "react";
 import "./App.css";
-import Form from "./components/Form";
-import Graph from "./components/Graph";
+import ExpenseTrackerUI from "./components/ExpenseTrackerUI";
+import AppContext from "./Context";
 
-function App() {
+const App = () => {
+  const [category, setCategory] = useState([]);
+  const [transactionsList, setTransactionsList] = useState([]);
+  const [labelPercArray, setLabelPercArray] = useState([]);
+
+  const val = {
+    categories: {
+      category,
+      setCategory,
+    },
+    transactions: {
+      transactionsList,
+      setTransactionsList,
+    },
+    labels: {
+      labelPercArray,
+      setLabelPercArray,
+    },
+  };
+  console.log(val);
+
   return (
-    <div className="App ">
-      <div className="container mx-auto max-w-6xl text-center drop-shadow-lg text-gray-800">
-        <h1 className="text-4xl py-8 mb-10 bg-slate-800 text-white rounded">
-          Expense Tracker
-        </h1>
-        <div className="grid md:grid-cols-2 gap-4">
-          <Graph />
-          <Form />
-        </div>
-      </div>
-    </div>
+    <AppContext.Provider value={val}>
+      <ExpenseTrackerUI />
+    </AppContext.Provider>
   );
-}
+};
 
 export default App;

@@ -12,6 +12,7 @@ app.use(express.json());
 // connecting to the database
 connectDB();
 
+console.log("Running the server");
 app.get("/", async (req, res, next) => {
   res.json({ message: "API Running" });
 });

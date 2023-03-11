@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useForm } from "react-hook-form";
+import AppContext from "../Context";
 import TransactionList from "./TransactionList";
+import { submitTransactionData } from "../common/api";
 
 const Form = () => {
   const { register, handleSubmit, resetField } = useForm();
 
+  const { categories } = useContext(AppContext);
+
   const onSubmit = (data) => {
     console.log(data);
+    submitTransactionData(data);
   };
 
   return (
@@ -22,13 +27,21 @@ const Form = () => {
               className="form-input"
             />
           </div>
-          <select className="form-input" {...register("expense-type")}>
+          {/* <select className="form-input" {...register("type")}>
             <option value="Investment" defaultValue>
               Investment
             </option>
             <option value="Expense">Expense</option>
             <option value="Savings">Savings</option>
-          </select>
+          </select> */}
+          <div className="input-group">
+            <input
+              type="text"
+              {...register("type")}
+              placeholder="Type"
+              className="form-input"
+            />
+          </div>
           <div className="input-group">
             <input
               type="text"
