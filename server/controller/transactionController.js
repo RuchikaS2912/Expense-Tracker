@@ -6,6 +6,7 @@ const getTransactions = async (req, res) => {
 };
 
 const createTransaction = async (req, res) => {
+  console.log(req.body, "Transaction creation request body");
   if (!req.body) {
     return res.status(400).json({ message: "Post HTTP data not provided" });
   }
