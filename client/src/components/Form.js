@@ -11,6 +11,9 @@ const Form = () => {
   const onSubmit = (data) => {
     console.log(data);
     submitTransactionData(data);
+    resetField("name");
+    resetField("type");
+    resetField("amount");
   };
 
   return (

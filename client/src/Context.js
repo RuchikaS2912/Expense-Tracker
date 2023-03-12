@@ -1,10 +1,6 @@
-import React, { createContext, useContext } from "react";
+import { createContext } from "react";
 
 const AppContext = createContext({
-  categories: {
-    category: [],
-    setCategory: () => {},
-  },
   transactions: {
     transactionsList: [],
     setTransactionsList: () => {},

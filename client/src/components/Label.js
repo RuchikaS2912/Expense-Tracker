@@ -11,30 +11,6 @@ const chartObj = [
 const Label = () => {
   const { labels } = useContext(AppContext);
 
-  // const getTransactionsCategoryPercentage = () => {
-  //   let countLabels = {};
-  //   let labelsArray = [];
-  //   for (const element of transactions.transactionsList) {
-  //     countLabels[element.type] = (countLabels[element.type] || 0) + 1;
-  //   }
-  //   for (let i = 0; i < Object.keys(countLabels).length; i++) {
-  //     labelsArray.push({
-  //       type: Object.keys(countLabels)[i],
-  //       percent: (
-  //         (Object.values(countLabels)[i] /
-  //           transactions.transactionsList.length) *
-  //         100
-  //       ).toFixed(2),
-  //       color: colors[Object.keys(countLabels)[i]],
-  //     });
-  //   }
-  //   labels.setLabelPercArray(labelsArray);
-  // };
-
-  // useEffect(() => {
-  //   getTransactionsCategoryPercentage();
-  // }, [transactions]);
-
   return (
     <div>
       {labels.labelPercArray.map((item, idx) => {

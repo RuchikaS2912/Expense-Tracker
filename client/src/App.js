@@ -4,15 +4,10 @@ import ExpenseTrackerUI from "./components/ExpenseTrackerUI";
 import AppContext from "./Context";
 
 const App = () => {
-  const [category, setCategory] = useState([]);
   const [transactionsList, setTransactionsList] = useState([]);
   const [labelPercArray, setLabelPercArray] = useState([]);
 
   const val = {
-    categories: {
-      category,
-      setCategory,
-    },
     transactions: {
       transactionsList,
       setTransactionsList,

@@ -6,13 +6,10 @@ import Form from "./Form";
 import Graph from "./Graph";
 
 const ExpenseTrackerUI = () => {
-  const { categories, transactions } = useContext(AppContext);
-  const { setCategory } = categories;
+  const { transactions } = useContext(AppContext);
   const { setTransactionsList } = transactions;
 
   const getTheStateValues = async () => {
-    const getCategories = await getCategory();
-    setCategory(getCategories);
     const getTransactions = await getTransactionsList();
     setTransactionsList(getTransactions);
   };
