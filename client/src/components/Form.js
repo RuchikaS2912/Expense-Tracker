@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import AppContext from "../Context";
 import TransactionList from "./TransactionList";
 import { submitTransactionData } from "../common/api";
+import colors from "../common/color";
 
 const Form = () => {
   const { register, handleSubmit, resetField } = useForm();
@@ -27,21 +28,19 @@ const Form = () => {
               className="form-input"
             />
           </div>
-          {/* <select className="form-input" {...register("type")}>
-            <option value="Investment" defaultValue>
-              Investment
-            </option>
-            <option value="Expense">Expense</option>
-            <option value="Savings">Savings</option>
-          </select> */}
-          <div className="input-group">
+          <select className="form-input" {...register("type")}>
+            {Object.keys(colors).map((item, idx) => {
+              return <option value={item}>{item}</option>;
+            })}
+          </select>
+          {/* <div className="input-group">
             <input
               type="text"
               {...register("type")}
               placeholder="Type"
               className="form-input"
             />
-          </div>
+          </div> */}
           <div className="input-group">
             <input
               type="text"

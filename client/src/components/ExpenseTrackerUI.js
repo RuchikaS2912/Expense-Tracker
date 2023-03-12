@@ -1,7 +1,6 @@
 import { useCallback, useContext, useEffect } from "react";
 import "../App.css";
 import { getCategory, getTransactionsList } from "../common/api";
-import colors from "../common/color";
 import AppContext from "../Context";
 import Form from "./Form";
 import Graph from "./Graph";

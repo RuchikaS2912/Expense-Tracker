@@ -28,7 +28,10 @@ const TransactionList = () => {
   };
 
   useEffect(() => {
-    if (labels.labelPercArray.length === 0) {
+    if (
+      labels.labelPercArray.length === 0 &&
+      transactions.transactionsList.length !== 0
+    ) {
       getTransactionsCategoryPercentage();
     }
   }, [labels]);
