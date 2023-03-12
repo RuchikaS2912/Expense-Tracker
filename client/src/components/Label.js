@@ -1,5 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
-import colors from "../common/color";
+import React, { useContext } from "react";
 import AppContext from "../Context";
 
 const chartObj = [

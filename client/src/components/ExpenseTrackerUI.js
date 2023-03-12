@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import "../App.css";
-import { getCategory, getTransactionsList } from "../common/api";
+import { getTransactionsList } from "../common/api";
 import AppContext from "../Context";
 import Form from "./Form";
 import Graph from "./Graph";
