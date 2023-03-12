@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import "boxicons";
 import AppContext from "../Context";
 import colors from "../common/color";
+import { deleteTransaction } from "../common/api";
 
 const TransactionList = () => {
   const { transactions, labels } = useContext(AppContext);
@@ -48,7 +49,7 @@ const TransactionList = () => {
               borderRight: `8px solid ${colors[item.type] ?? "#e5e5e5"}`,
             }}
           >
-            <button className="px-3">
+            <button className="px-3" onClick={() => deleteTransaction(item)}>
               <box-icon name="trash" size="15px" color="red" />
             </button>
             <span className="block w-full">{item.name ?? ""}</span>

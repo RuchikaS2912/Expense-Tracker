@@ -8,8 +8,6 @@ import colors from "../common/color";
 const Form = () => {
   const { register, handleSubmit, resetField } = useForm();
 
-  const { categories } = useContext(AppContext);
-
   const onSubmit = (data) => {
     console.log(data);
     submitTransactionData(data);
@@ -33,14 +31,6 @@ const Form = () => {
               return <option value={item}>{item}</option>;
             })}
           </select>
-          {/* <div className="input-group">
-            <input
-              type="text"
-              {...register("type")}
-              placeholder="Type"
-              className="form-input"
-            />
-          </div> */}
           <div className="input-group">
             <input
               type="text"

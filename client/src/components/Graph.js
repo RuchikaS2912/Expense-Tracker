@@ -46,10 +46,8 @@ const Graph = () => {
   };
 
   const getTotalAmountSpent = () => {
-    console.log("transactions.transactionsList", transactions.transactionsList);
     let total = 0;
     for (const val of transactions.transactionsList) {
-      console.log(val);
       total = total + val.amount;
     }
     setTotalAmount(total);

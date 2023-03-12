@@ -1,4 +1,4 @@
-import { useCallback, useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import "../App.css";
 import { getCategory, getTransactionsList } from "../common/api";
 import AppContext from "../Context";

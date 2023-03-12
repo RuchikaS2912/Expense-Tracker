@@ -45,3 +45,15 @@ export const getTransactionsList = async () => {
       return err.response?.data;
     });
 };
+
+export const deleteTransaction = async (data) => {
+  await axios
+    .delete(`http://localhost:8080/api/v1/transactions`, data)
+    .then((res) => {
+      console.log("Deleted transaction successfully");
+    })
+    .catch((err) => {
+      console.log("Error deleting the transaction");
+      console.log(err.response?.data);
+    });
+};
