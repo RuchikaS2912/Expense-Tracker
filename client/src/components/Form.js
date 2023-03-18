@@ -8,11 +8,11 @@ const Form = () => {
   const { register, handleSubmit, resetField } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
     submitTransactionData(data);
     resetField("name");
     resetField("type");
     resetField("amount");
+    window.location.reload(true);
   };
 
   return (

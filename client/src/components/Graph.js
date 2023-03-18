@@ -42,7 +42,6 @@ const Graph = () => {
     }
     setChartColor(colors);
     setChartData(data);
-    console.log("color: ", colors, "     ", "type:", label);
   };
 
   const getTotalAmountSpent = () => {

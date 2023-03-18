@@ -17,7 +17,6 @@ const App = () => {
       setLabelPercArray,
     },
   };
-  console.log(val);
 
   return (
     <AppContext.Provider value={val}>

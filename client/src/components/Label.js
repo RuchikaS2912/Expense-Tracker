@@ -1,12 +1,6 @@
 import React, { useContext } from "react";
 import AppContext from "../Context";
 
-const chartObj = [
-  { type: "Savings", color: "#f9c74f", percent: 45 },
-  { type: "Investment", color: "#f9c74f", percent: 20 },
-  { type: "Expense", color: "rgb(54,162,235)", percent: 10 },
-];
-
 const Label = () => {
   const { labels } = useContext(AppContext);
 
