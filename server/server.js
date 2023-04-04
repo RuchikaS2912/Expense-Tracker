@@ -5,7 +5,7 @@ const port = process.env.PORT || 8080;
 const cors = require("cors");
 const apiRoutes = require("./routes/apiRoutes");
 const { connectDB } = require("./db/database");
-// app.set('views', path.join(__dirname, ''));
+
 app.use(express.static("../client/build"));
 // use middleware
 app.use(cors());
