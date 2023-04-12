@@ -6,7 +6,6 @@ import AppContext from "./Context";
 const App = () => {
   const [transactionsList, setTransactionsList] = useState([]);
   const [labelPercArray, setLabelPercArray] = useState([]);
-
   const val = {
     transactions: {
       transactionsList,
