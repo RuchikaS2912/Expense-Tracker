@@ -2,7 +2,7 @@ import axios from "axios";
 
 export const submitTransactionData = async (data) => {
   await axios
-    .post(`${process.env.REACT_APP_SERVER_PORT}/api/v1/transactions`, data)
+    .post(`${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`, data)
     .then((res) => {
       console.log("Posted transaction successfully");
     })
@@ -14,7 +14,7 @@ export const submitTransactionData = async (data) => {
 
 export const getTransactionsList = async () => {
   return await axios
-    .get(`${process.env.REACT_APP_SERVER_PORT}/api/v1/transactions`, {
+    .get(`${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`, {
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json",
@@ -31,7 +31,10 @@ export const getTransactionsList = async () => {
 
 export const deleteTransaction = async (data) => {
   await axios
-    .delete(`${process.env.REACT_APP_SERVER_PORT}/api/v1/transactions`, data)
+    .delete(
+      `${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`,
+      data
+    )
     .then((res) => {
       console.log("Deleted transaction successfully");
     })
