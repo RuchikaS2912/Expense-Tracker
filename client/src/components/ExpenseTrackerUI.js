@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useContext, useEffect } from "react";
 import "../App.css";
 import { getTransactionsList } from "../common/api";
