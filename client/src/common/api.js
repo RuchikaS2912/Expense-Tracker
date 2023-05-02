@@ -2,7 +2,10 @@ import axios from "axios";
 
 export const submitTransactionData = async (data) => {
   await axios
-    .post(`${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`, data)
+    .post(
+      `https://expense-tracker-server-60pt.onrender.com/api/v1/transactions`,
+      data
+    )
     .then((res) => {
       console.log("Posted transaction successfully");
     })
@@ -14,12 +17,15 @@ export const submitTransactionData = async (data) => {
 
 export const getTransactionsList = async () => {
   return await axios
-    .get(`${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
+    .get(
+      `https://expense-tracker-server-60pt.onrender.com/api/v1/transactions`,
+      {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      }
+    )
     .then((res) => {
       return res.data;
     })
@@ -32,7 +38,7 @@ export const getTransactionsList = async () => {
 export const deleteTransaction = async (data) => {
   await axios
     .delete(
-      `${process.env.REACT_APP_SERVER_PORT_LIVE}/api/v1/transactions`,
+      `https://expense-tracker-server-60pt.onrender.com/api/v1/transactions`,
       data
     )
     .then((res) => {
